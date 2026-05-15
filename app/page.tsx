@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* 3D Spline Viewer */}
       <div
-        className="fixed right-0 top-0 w-full h-screen pointer-events-none z-0 hidden lg:block"
+        className="fixed right-0 top-0 w-full h-screen pointer-events-none z-0"
         style={{ opacity: 1 }}
       >
         <div className="track">
@@ -46,6 +46,12 @@ export default function Home() {
           />
         </div>
       </div>
+
+      {/* Mobile gradient background */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0 block lg:hidden"
+        style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(79,142,247,0.15) 0%, transparent 60%)" }}
+      />
 
       <div style={{
         position: "fixed",
