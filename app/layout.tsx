@@ -22,6 +22,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Flowi Solutions | Automatización, Páginas web y Bots",
   description: "Agencia mexicana especializada en automatización web, desarrollo de páginas y bots inteligentes para tu negocio.",
+  icons: {
+    icon: "/favicon.webp",
+  },
 }
 
 export default function RootLayout({
