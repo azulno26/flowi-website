@@ -12,10 +12,10 @@ export default function Home() {
   const whatsappLink = "https://api.whatsapp.com/send/?phone=525623194635"
 
   const portfolio = [
-    { name: "Estética y Podología Sharm", url: "https://www.esteticasharm.com/", favicon: "https://www.google.com/s2/favicons?domain=www.esteticasharm.com&sz=64", desc: "Página web + bot de citas automatizado" },
-    { name: "Golden Heritage", url: "https://goldenheritage.com.mx/", favicon: "https://www.google.com/s2/favicons?domain=goldenheritage.com.mx&sz=128", desc: "Tienda online con integración de pagos y envíos" },
     { name: "Plattform", url: "https://plattform.mx/", favicon: "https://www.google.com/s2/favicons?domain=plattform.mx&sz=64", desc: "Plataforma SaaS de e-learning para instructores universitarios" },
     { name: "Bazares MX", url: "https://bazaresmx.com.mx/", favicon: "/bazaresmx-logo.png", desc: "Directorio digital de bazares y mercados en México" },
+    { name: "Estética y Podología Sharm", url: "https://www.esteticasharm.com/", favicon: "https://www.google.com/s2/favicons?domain=www.esteticasharm.com&sz=64", desc: "Página web + bot de citas automatizado" },
+    { name: "Golden Heritage", url: "https://goldenheritage.com.mx/", favicon: "https://www.google.com/s2/favicons?domain=goldenheritage.com.mx&sz=128", desc: "Tienda online con integración de pagos y envíos" },
   ]
 
   const testimonials = [
@@ -141,9 +141,9 @@ export default function Home() {
 
       {/* Portfolio */}
       <section id="portafolio" className="relative z-20 py-16 lg:py-24">
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 lg:mb-12">Proyectos que hemos construido</h2>
-          <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
             {portfolio.map((p, i) => (
               <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" className="group relative rounded-2xl border border-zinc-800 p-3 block hover:border-[#4f8ef7]/40 transition-colors duration-300">
                 <GlowingEffect blur={0} borderWidth={2} spread={80} glow={true} disabled={false} proximity={64} inactiveZone={0.01} />

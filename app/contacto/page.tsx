@@ -76,7 +76,7 @@ export default function ContactoPage() {
 
       {/* Hero */}
       <section className="relative z-20 pt-32 pb-16 lg:pt-40 lg:pb-24" style={{ background: "radial-gradient(ellipse at top, rgba(79,142,247,0.06) 0%, transparent 60%)" }}>
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-3xl">
             <p className="text-[#4f8ef7] font-heading font-extrabold text-sm uppercase tracking-widest mb-4">Contacto</p>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[0.95] text-balance">
@@ -90,15 +90,15 @@ export default function ContactoPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="relative z-20 pb-16 lg:pb-24">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="relative z-20 pb-16 lg:pb-24 overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#4f8ef7]/20 via-[#7c6ff7]/10 to-transparent" />
             <div className="absolute inset-0 bg-zinc-950/80 backdrop-blur-sm" />
             <div className="absolute inset-0 rounded-2xl lg:rounded-3xl border border-[#4f8ef7]/30" />
 
             <div className="relative p-8 sm:p-12 lg:p-16">
-              <div className="grid lg:grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left: Info */}
                 <div>
                   <h2 className="font-heading text-2xl sm:text-3xl font-extrabold mb-6">Escríbenos por donde prefieras</h2>
@@ -138,22 +138,22 @@ export default function ContactoPage() {
                 </div>
 
                 {/* Right: Form */}
-                <form className="space-y-4" onSubmit={handleSubmit}>
+                <form className="space-y-4 w-full max-w-full" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="nombre" className="block text-sm text-zinc-400 mb-1.5">Nombre</label>
-                    <input id="nombre" type="text" placeholder="Tu nombre" value={form.nombre} onChange={handleChange} required className="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors" />
+                    <input id="nombre" type="text" placeholder="Tu nombre" value={form.nombre} onChange={handleChange} required className="w-full max-w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="negocio" className="block text-sm text-zinc-400 mb-1.5">Tipo de negocio</label>
-                    <input id="negocio" type="text" placeholder="Ej: Estética, restaurante, consultorio..." value={form.negocio} onChange={handleChange} required className="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors" />
+                    <input id="negocio" type="text" placeholder="Ej: Estética, restaurante, consultorio..." value={form.negocio} onChange={handleChange} required className="w-full max-w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm text-zinc-400 mb-1.5">Email</label>
-                    <input id="email" type="email" placeholder="tu@email.com" value={form.email} onChange={handleChange} required className="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors" />
+                    <input id="email" type="email" placeholder="tu@email.com" value={form.email} onChange={handleChange} required className="w-full max-w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="mensaje" className="block text-sm text-zinc-400 mb-1.5">¿Qué quieres mejorar?</label>
-                    <textarea id="mensaje" placeholder="Cuéntanos brevemente qué necesitas..." rows={4} value={form.mensaje} onChange={handleChange} required className="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors resize-none" />
+                    <textarea id="mensaje" placeholder="Cuéntanos brevemente qué necesitas..." rows={4} value={form.mensaje} onChange={handleChange} required className="w-full max-w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-[#4f8ef7] transition-colors resize-none" />
                   </div>
 
                   <Button type="submit" size="lg" disabled={loading} className="w-full bg-[#4f8ef7] hover:bg-[#3d7be6] text-white py-6 text-base rounded-xl transition-all duration-300 disabled:opacity-60">
