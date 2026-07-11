@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Syne, DM_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { LenisProvider } from "@/components/lenis-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -77,6 +78,7 @@ export default function RootLayout({
             })
           }}
         />
+        <GoogleAnalytics gaId="G-5ZV5XX20CT" />
       </body>
     </html>
   )
