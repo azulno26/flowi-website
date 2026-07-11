@@ -20,10 +20,19 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Flowi Solutions | Automatización, Páginas web y Bots",
-  description: "Agencia mexicana especializada en automatización web, desarrollo de páginas y bots inteligentes para tu negocio.",
+  title: 'Flowi Solutions | Páginas web, bots y automatización para negocios en México',
+  description: 'Creamos páginas web profesionales, bots de atención y automatizaciones para pequeños negocios en México. Soluciones digitales desde $1,800 MXN.',
   icons: {
     icon: "/favicon.webp",
+  },
+  alternates: { canonical: 'https://www.flowisolutions.com' },
+  openGraph: {
+    title: 'Flowi Solutions | Automatización para negocios en México',
+    description: 'Páginas web, bots y automatizaciones para pequeños negocios. Resultados desde el primer día.',
+    url: 'https://www.flowisolutions.com',
+    siteName: 'Flowi Solutions',
+    locale: 'es_MX',
+    type: 'website',
   },
 }
 
@@ -43,6 +52,31 @@ export default function RootLayout({
           <Footer />
         </LenisProvider>
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Flowi Solutions",
+              "description": "Agencia digital especializada en páginas web, bots y automatización para pequeños negocios en México.",
+              "url": "https://www.flowisolutions.com",
+              "email": "contacto@flowisolutions.com",
+              "telephone": "+525623194635",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "MX",
+                "addressLocality": "Ciudad de México"
+              },
+              "sameAs": [
+                "https://www.instagram.com/flowi_solutions/",
+                "https://www.facebook.com/profile.php?id=61583292193689"
+              ],
+              "priceRange": "$$",
+              "knowsLanguage": "es"
+            })
+          }}
+        />
       </body>
     </html>
   )

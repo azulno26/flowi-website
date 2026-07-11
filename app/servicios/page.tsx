@@ -6,8 +6,9 @@ import Link from "next/link"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Servicios | Flowi Solutions",
-  description: "Automatización, páginas web y bots inteligentes para tu negocio.",
+  title: 'Servicios | Páginas web, bots y automatización — Flowi Solutions',
+  description: 'Diseño web profesional, chatbots para WhatsApp y automatización de procesos para negocios locales en México.',
+  alternates: { canonical: 'https://www.flowisolutions.com/servicios' },
 }
 
 const services = [

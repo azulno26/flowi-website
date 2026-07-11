@@ -6,8 +6,9 @@ import Link from "next/link"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "¿Por qué nosotros? | Flowi Solutions",
-  description: "Enfocados en negocios reales, sin tecnicismos, con acompañamiento continuo. Conoce qué hace diferente a Flowi Solutions.",
+  title: '¿Por qué Flowi Solutions? | Agencia digital para pequeños negocios',
+  description: 'Trabajamos con estéticas, restaurantes, consultorios y freelancers. Sin tecnicismos, con acompañamiento real y resultados rápidos.',
+  alternates: { canonical: 'https://www.flowisolutions.com/por-que-nosotros' },
 }
 
 const differentiators = [
