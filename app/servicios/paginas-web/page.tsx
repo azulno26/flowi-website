@@ -51,9 +51,21 @@ export default function PaginasWebPage() {
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[0.95] text-balance max-w-4xl">
           Tu negocio local merece una página web que <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f8ef7] to-[#7c6ff7]">trabaje por ti</span>
         </h1>
-        <p className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
+        <p className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-6">
           Miles de pequeños negocios en México pierden clientes todos los días porque no los encuentran en internet. Una página web profesional cambia eso desde el primer día.
         </p>
+        <p className="text-zinc-500 text-sm mb-6 flex flex-wrap gap-x-4 gap-y-1">
+          <span>✓ Sin pagos hasta ver el diseño</span>
+          <span>✓ Entrega en días</span>
+          <span>✓ Soporte incluido</span>
+        </p>
+        <Button asChild size="lg" className="rounded-full transition-all duration-300 bg-[#25D366] hover:bg-[#1ebd5b] text-white font-medium border-0">
+          <a href="https://api.whatsapp.com/send/?phone=525623194635&text=Hola,%20vi%20su%20anuncio%20y%20quiero%20información%20sobre%20páginas%20web" target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="mr-2 w-5 h-5" />
+            Quiero mi página web
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </a>
+        </Button>
       </section>
 
       {/* Checklist section */}
@@ -136,7 +148,9 @@ export default function PaginasWebPage() {
             { q: "¿Cuánto tiempo tarda en estar lista mi página?", a: "La mayoría de las páginas las entregamos entre 5 y 10 días hábiles. Proyectos más complejos como tiendas en línea pueden tomar de 2 a 4 semanas." },
             { q: "¿Necesito saber de tecnología para tener una página web?", a: "Para nada. Nosotros nos encargamos de todo lo técnico. Solo necesitamos la información de tu negocio, tus fotos y tus ideas. Te explicamos todo sin tecnicismos." },
             { q: "¿Puedo actualizar el contenido yo mismo después?", a: "Sí. Dependiendo del tipo de página, te dejamos un panel de administración sencillo o te enseñamos cómo hacer cambios básicos. También ofrecemos planes de mantenimiento." },
-            { q: "¿La página se ve bien en celular y computadora?", a: "Absolutamente. Todas nuestras páginas son responsive, lo que significa que se adaptan automáticamente al tamaño de cualquier pantalla — celular, tablet o computadora." }
+            { q: "¿La página se ve bien en celular y computadora?", a: "Absolutamente. Todas nuestras páginas son responsive, lo que significa que se adaptan automáticamente al tamaño de cualquier pantalla — celular, tablet o computadora." },
+            { q: "¿Cuánto cuesta una página web profesional?", a: "Cada proyecto es diferente — depende del tipo de página, las funciones que necesitas y el tiempo de entrega. Lo que sí te garantizamos es que trabajamos con presupuestos reales para negocios locales. Escríbenos y te damos un precio claro sin rodeos." },
+            { q: "¿Por qué contratar Flowi Solutions y no hacer la página yo mismo?", a: "Puedes hacerlo tú mismo con herramientas gratuitas, y funciona para algunos negocios. Pero si quieres una página que se vea profesional, cargue rápido, aparezca en Google y esté lista sin que tengas que aprender tecnología — ahí es donde entramos nosotros." }
           ].map((faq, i) => (
             <details key={i} className="group border-b border-zinc-800 last:border-0 [&_summary::-webkit-details-marker]:hidden">
               <summary className="font-heading font-extrabold text-base lg:text-lg cursor-pointer py-4 text-white flex items-center justify-between">
@@ -163,7 +177,7 @@ export default function PaginasWebPage() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="rounded-full transition-all duration-300 bg-[#25D366] hover:bg-[#1ebd5b] text-white font-medium border-0 w-full sm:w-auto">
-            <a href="https://api.whatsapp.com/send/?phone=525623194635" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send/?phone=525623194635&text=Hola,%20me%20interesa%20una%20página%20web%20para%20mi%20negocio" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 w-5 h-5" />
               Escríbenos por WhatsApp
             </a>
