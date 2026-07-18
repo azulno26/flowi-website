@@ -16,7 +16,7 @@ const services = [
     icon: Zap,
     color: "#4f8ef7",
     title: "Automatización",
-
+    href: "/servicios/automatizacion",
     desc: "Optimiza tus procesos con flujos automatizados. Conectamos tus herramientas y eliminamos tareas repetitivas para que te enfoques en lo importante.",
     features: [
       "Flujos automatizados con n8n y Make",
@@ -30,7 +30,7 @@ const services = [
     icon: Globe,
     color: "#7c6ff7",
     title: "Páginas Web",
-
+    href: "/servicios/paginas-web",
     desc: "Sitios modernos, rápidos y optimizados para convertir visitantes en clientes. Diseño responsivo y enfocado en resultados.",
     features: [
       "Diseño responsivo y moderno",
@@ -44,7 +44,7 @@ const services = [
     icon: Bot,
     color: "#4f8ef7",
     title: "Bots Inteligentes",
-
+    href: "/servicios/consultoria",
     desc: "Chatbots y asistentes virtuales que atienden a tus clientes 24/7. Integración con WhatsApp, Messenger y tu sitio web.",
     features: [
       "Bot de WhatsApp Business",
@@ -128,6 +128,9 @@ export default function ServiciosPage() {
                         </li>
                       ))}
                     </ul>
+                    <Link href={service.href} className="inline-flex items-center gap-2 mt-6 text-[#4f8ef7] hover:text-white font-heading font-extrabold text-sm transition-colors duration-300">
+                      Ver más <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
               </div>
