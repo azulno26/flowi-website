@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Mail, ArrowRight, Loader2 } from "lucide-react"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import Script from "next/script"
 
 const whatsappLink = "https://api.whatsapp.com/send/?phone=525623194635"
@@ -10,9 +11,10 @@ const instagramLink = "https://www.instagram.com/flowi_solutions/"
 const facebookLink = "https://www.facebook.com/profile.php?id=61583292193689"
 
 export default function ContactoPage() {
+  const router = useRouter()
   const [form, setForm] = useState({ nombre: "", negocio: "", email: "", mensaje: "" })
   const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
+  const [status, setStatus] = useState<"idle" | "error">("idle")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.id]: e.target.value })
@@ -32,8 +34,8 @@ export default function ContactoPage() {
       const data = await res.json()
 
       if (data.ok) {
-        setStatus("success")
-        setForm({ nombre: "", negocio: "", email: "", mensaje: "" })
+        router.push("/gracias")
+        return
       } else {
         setStatus("error")
       }
@@ -164,9 +166,6 @@ export default function ContactoPage() {
                     )}
                   </Button>
 
-                  {status === "success" && (
-                    <p className="text-green-400 text-sm text-center mt-2">¡Mensaje enviado! Te contactamos pronto.</p>
-                  )}
                   {status === "error" && (
                     <p className="text-red-400 text-sm text-center mt-2">Hubo un error, intenta de nuevo.</p>
                   )}
