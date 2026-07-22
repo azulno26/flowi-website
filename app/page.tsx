@@ -14,7 +14,7 @@ export default function Home() {
   const portfolio = [
     { name: "Plattform", url: "https://plattform.mx/", favicon: "https://www.google.com/s2/favicons?domain=plattform.mx&sz=64", desc: "Plataforma SaaS de e-learning para instructores universitarios" },
     { name: "Bazares MX", url: "https://bazaresmx.com.mx/", favicon: "/bazaresmx-logo.png", desc: "Directorio digital de bazares y mercados en México" },
-    { name: "Kreandoen3d", url: "https://kreandoen3d.com.mx/", favicon: "https://www.google.com/s2/favicons?domain=kreandoen3d.com.mx&sz=64", desc: "E-commerce con catálogo autoadministrable e identidad 3D interactiva" },
+    { name: "Kreandoen3d", url: "https://kreandoen3d.com.mx/", favicon: "/kreandoen3d-logo.jpg", desc: "E-commerce con catálogo autoadministrable e identidad 3D interactiva" },
     { name: "Estética y Podología Sharm", url: "https://www.esteticasharm.com/", favicon: "https://www.google.com/s2/favicons?domain=www.esteticasharm.com&sz=64", desc: "Página web + bot de citas automatizado" },
     { name: "Golden Heritage", url: "https://goldenheritage.com.mx/", favicon: "https://www.google.com/s2/favicons?domain=goldenheritage.com.mx&sz=128", desc: "Tienda online con integración de pagos y envíos" },
   ]
