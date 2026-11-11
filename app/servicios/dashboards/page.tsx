@@ -273,6 +273,12 @@ export default function DashboardsPage() {
                 ))}
               </ul>
               <p className="text-zinc-400 mt-6">Lo que antes era una tarde de tablas dinámicas, hoy es una pregunta.</p>
+              <p className="text-zinc-400 mt-4">
+                ¿Prefieres hacerlo tú en Excel?{" "}
+                <Link href="/blog/como-hacer-un-dashboard-en-excel" className="text-[#4f8ef7] hover:text-white font-medium transition-colors">
+                  Lee nuestra guía paso a paso →
+                </Link>
+              </p>
             </div>
           </div>
         </div>
