@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { GlowingEffect } from "@/components/ui/glowing-effect"
-import { MessageCircle, Bot, Globe, Zap, ArrowRight, Quote, Star, ExternalLink } from "lucide-react"
+import { MessageCircle, Bot, Globe, Zap, BarChart3, ArrowRight, Quote, Star, ExternalLink } from "lucide-react"
 import { useRef } from "react"
 import Link from "next/link"
 import Script from "next/script"
@@ -112,13 +112,14 @@ export default function Home() {
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 lg:mb-6">Nuestros Servicios</h2>
             <p className="text-base sm:text-lg text-zinc-400 mb-8 lg:mb-12 max-w-2xl">Soluciones digitales completas para automatizar, conectar y escalar tu negocio.</p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
               {[
-                { icon: Zap, color: "#4f8ef7", title: "Automatización", desc: "Conectamos tus herramientas y eliminamos tareas repetitivas." },
-                { icon: Globe, color: "#7c6ff7", title: "Páginas Web", desc: "Sitios modernos, rápidos y optimizados para convertir." },
-                { icon: Bot, color: "#4f8ef7", title: "Bots Inteligentes", desc: "Chatbots que atienden a tus clientes 24/7.", span: true },
+                { icon: Zap, color: "#4f8ef7", title: "Automatización", desc: "Conectamos tus herramientas y eliminamos tareas repetitivas.", href: "/servicios/automatizacion" },
+                { icon: BarChart3, color: "#7c6ff7", title: "Dashboards con IA", desc: "Tu Excel convertido en un tablero de control al que le preguntas.", href: "/servicios/dashboards" },
+                { icon: Globe, color: "#4f8ef7", title: "Páginas Web", desc: "Sitios modernos, rápidos y optimizados para convertir.", href: "/servicios/paginas-web" },
+                { icon: Bot, color: "#7c6ff7", title: "Bots Inteligentes", desc: "Chatbots que atienden a tus clientes 24/7.", href: "/servicios/consultoria" },
               ].map((s, i) => (
-                <div key={i} className={`relative rounded-2xl border border-zinc-800 p-3${s.span ? " sm:col-span-2 lg:col-span-1" : ""}`}>
+                <Link key={i} href={s.href} className="relative rounded-2xl border border-zinc-800 p-3 block">
                   <GlowingEffect blur={0} borderWidth={2} spread={80} glow={true} disabled={false} proximity={64} inactiveZone={0.01} />
                   <div className="relative bg-zinc-900/50 rounded-xl p-6 lg:p-8 h-full">
                     <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl flex items-center justify-center mb-4 lg:mb-6" style={{ backgroundColor: `${s.color}15` }}>
@@ -127,7 +128,7 @@ export default function Home() {
                     <h3 className="font-heading text-xl lg:text-2xl font-extrabold mb-3 lg:mb-4">{s.title}</h3>
                     <p className="text-zinc-400 leading-relaxed text-sm lg:text-base">{s.desc}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

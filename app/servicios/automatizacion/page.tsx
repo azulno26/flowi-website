@@ -86,6 +86,12 @@ export default function AutomatizacionPage() {
               </ul>
             </div>
           </div>
+          <p className="text-zinc-400 mt-6">
+            ¿Buscas reportes automáticos o un dashboard de tus ventas en Excel?{" "}
+            <Link href="/servicios/dashboards" className="text-[#4f8ef7] hover:text-white font-medium transition-colors">
+              Conoce nuestros dashboards con IA →
+            </Link>
+          </p>
         </div>
 
         {/* Real Examples Grid */}

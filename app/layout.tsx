@@ -21,8 +21,8 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Flowi Solutions | Páginas web, bots y automatización para negocios en México',
-  description: 'Creamos páginas web profesionales, bots de atención y automatizaciones para pequeños negocios en México. Soluciones digitales desde $1,800 MXN.',
+  title: 'Flowi Solutions | Páginas web, bots, dashboards y automatización en México',
+  description: 'Creamos páginas web profesionales, bots de atención, dashboards con IA a partir de tu Excel y automatizaciones para negocios en México. Soluciones digitales desde $1,800 MXN.',
   icons: {
     icon: "/favicon.webp",
   },
@@ -60,7 +60,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Flowi Solutions",
-              "description": "Agencia digital especializada en páginas web, bots y automatización para pequeños negocios en México.",
+              "description": "Agencia digital especializada en páginas web, bots, dashboards con IA y automatización de datos para negocios en México.",
               "url": "https://www.flowisolutions.com",
               "email": "contacto@flowisolutions.com",
               "telephone": "+525623194635",

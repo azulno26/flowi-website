@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { GlowingEffect } from "@/components/ui/glowing-effect"
-import { Zap, Globe, Bot, ArrowRight, CheckCircle, MessageCircle } from "lucide-react"
+import { Zap, Globe, Bot, BarChart3, ArrowRight, CheckCircle, MessageCircle } from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: 'Servicios | Páginas web, bots y automatización — Flowi Solutions',
-  description: 'Diseño web profesional, chatbots para WhatsApp y automatización de procesos para negocios locales en México.',
+  title: 'Servicios | Páginas web, bots, dashboards y automatización — Flowi Solutions',
+  description: 'Diseño web profesional, chatbots para WhatsApp, dashboards con IA a partir de tu Excel y automatización de procesos para negocios en México.',
   alternates: { canonical: 'https://www.flowisolutions.com/servicios' },
 }
 
@@ -27,8 +27,22 @@ const services = [
     ],
   },
   {
-    icon: Globe,
+    icon: BarChart3,
     color: "#7c6ff7",
+    title: "Dashboards con IA",
+    href: "/servicios/dashboards",
+    desc: "Convertimos tus reportes de Excel en un tablero de control con tus ventas, inventario y clientes, al que le preguntas en español y te responde con tablas y gráficas.",
+    features: [
+      "Tablero de control web con tus KPI",
+      "Preguntas en español respondidas por IA",
+      "Tablas dinámicas y filtros sin rehacer reportes",
+      "Exportación a Excel y PowerPoint",
+      "Acceso privado con usuario y contraseña",
+    ],
+  },
+  {
+    icon: Globe,
+    color: "#4f8ef7",
     title: "Páginas Web",
     href: "/servicios/paginas-web",
     desc: "Sitios modernos, rápidos y optimizados para convertir visitantes en clientes. Diseño responsivo y enfocado en resultados.",
@@ -42,7 +56,7 @@ const services = [
   },
   {
     icon: Bot,
-    color: "#4f8ef7",
+    color: "#7c6ff7",
     title: "Bots Inteligentes",
     href: "/servicios/consultoria",
     desc: "Chatbots y asistentes virtuales que atienden a tus clientes 24/7. Integración con WhatsApp, Messenger y tu sitio web.",
