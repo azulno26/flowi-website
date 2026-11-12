@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const { nombre, negocio, email, mensaje } = await req.json();
   
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Flowi Web <contacto@flowisolutions.com>',
       to: 'contacto@flowisolutions.com',
       subject: `Nuevo mensaje de ${nombre} - ${negocio}`,
@@ -19,7 +19,20 @@ export async function POST(req: Request) {
         <p><strong>Mensaje:</strong> ${mensaje}</p>
       `
     });
-    return NextResponse.json({ ok: true });
+    if (error) {
+      return NextResponse.json({ ok: false }, { status: 500 });
+    }
+
+    // Permite ver /gracias (ver proxy.ts) solo tras un envío exitoso.
+    const res = NextResponse.json({ ok: true });
+    res.cookies.set('flowi_lead', '1', {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 300,
+    });
+    return res;
   } catch (error) {
     return NextResponse.json({ ok: false }, { status: 500 });
   }
